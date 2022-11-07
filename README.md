@@ -1,3 +1,3 @@
 # Boid_Flocking_Animation
-Simulating flock of birds using p5.js 
+Simulating flock of boids using p5.js with obstacles
 
