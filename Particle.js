@@ -5,7 +5,7 @@ class Particle {
         this.acceleration = createVector();
         this.maxForce = 0.05;
         this.maxSpeed = 8;
-        this.r = 5;
+        this.size = 5;
     }
     //function to draw the particle on the canvas
     Show(r, g, b, type = "triangle") {
@@ -17,7 +17,7 @@ class Particle {
         let direction = this.velocity.heading() + radians(90);
         translate(this.position.x, this.position.y);
         rotate(direction);
-        type == "triangle" ? triangle(0, -this.r * 2, -this.r, this.r * 2, this.r, this.r * 2) : ellipse(0, 0, 50);
+        type == "triangle" ? triangle(0, -this.size * 2, -this.size, this.size * 2, this.size, this.size * 2) : ellipse(0, 0, 50);
 
         pop();
 
