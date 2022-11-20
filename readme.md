@@ -1,4 +1,7 @@
-# p5 template project
+# p5 Boids animation simulation
+
+Play with the siulation here: [PLAY](https://leogenot.github.io/BoidsAnimation/)
+Use controls to change simulation parameters
 
 ## Installing
 
