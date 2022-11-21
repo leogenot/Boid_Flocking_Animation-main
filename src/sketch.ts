@@ -191,17 +191,6 @@ class Particle {
 
 
         }
-        for (let otherParticle of Particles) {
-
-            let distance = dist(this.position.x, this.position.y, otherParticle.position.x, otherParticle.position.y);
-            if (distance < perception && otherParticle != this) {
-                v.x = this.position.x - otherParticle.position.x;
-                v.y = this.position.y - otherParticle.position.y;
-
-            }
-
-
-        }
 
         v.x *= avoidFactor;
         v.y *= avoidFactor;
@@ -229,20 +218,10 @@ class Particle {
 
 
         }
-        for (let otherParticle of Particles) {
-
-            let distance = dist(this.position.x, this.position.y, otherParticle.position.x, otherParticle.position.y);
-            if (distance < perception && otherParticle != this) {
-                v.x = this.position.x - otherParticle.position.x;
-                v.y = this.position.y - otherParticle.position.y;
-
-            }
-
-
-        }
 
         v.x *= avoidFactor;
         v.y *= avoidFactor;
+
 
         return v;
 
@@ -259,8 +238,8 @@ class Particle {
         for (let otherParticle of Particles) {
 
 
-            let distance2 = dist(this.position.x, this.position.y, mouseX, mouseY);
-            if (distance2 < perception) {
+            let distance = dist(this.position.x, this.position.y, mouseX, mouseY);
+            if (distance < perception) {
 
                 v.x = this.position.x - mouseX;
                 v.y = this.position.y - mouseY;

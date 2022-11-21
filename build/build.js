@@ -131,14 +131,6 @@ var Particle = (function () {
                 v.y = this.position.y - otherParticle.position.y;
             }
         }
-        for (var _a = 0, Particles_4 = Particles; _a < Particles_4.length; _a++) {
-            var otherParticle = Particles_4[_a];
-            var distance = dist(this.position.x, this.position.y, otherParticle.position.x, otherParticle.position.y);
-            if (distance < perception && otherParticle != this) {
-                v.x = this.position.x - otherParticle.position.x;
-                v.y = this.position.y - otherParticle.position.y;
-            }
-        }
         v.x *= avoidFactor;
         v.y *= avoidFactor;
         return v;
@@ -147,16 +139,8 @@ var Particle = (function () {
         var v = createVector();
         var perception = 50;
         var avoidFactor = 0.5;
-        for (var _i = 0, Particles_5 = Particles; _i < Particles_5.length; _i++) {
-            var otherParticle = Particles_5[_i];
-            var distance = dist(this.position.x, this.position.y, otherParticle.position.x, otherParticle.position.y);
-            if (distance < perception && otherParticle != this) {
-                v.x = this.position.x - otherParticle.position.x;
-                v.y = this.position.y - otherParticle.position.y;
-            }
-        }
-        for (var _a = 0, Particles_6 = Particles; _a < Particles_6.length; _a++) {
-            var otherParticle = Particles_6[_a];
+        for (var _i = 0, Particles_4 = Particles; _i < Particles_4.length; _i++) {
+            var otherParticle = Particles_4[_i];
             var distance = dist(this.position.x, this.position.y, otherParticle.position.x, otherParticle.position.y);
             if (distance < perception && otherParticle != this) {
                 v.x = this.position.x - otherParticle.position.x;
@@ -171,10 +155,10 @@ var Particle = (function () {
         var v = createVector();
         var perception = 50;
         var avoidFactor = 1;
-        for (var _i = 0, Particles_7 = Particles; _i < Particles_7.length; _i++) {
-            var otherParticle = Particles_7[_i];
-            var distance2 = dist(this.position.x, this.position.y, mouseX, mouseY);
-            if (distance2 < perception) {
+        for (var _i = 0, Particles_5 = Particles; _i < Particles_5.length; _i++) {
+            var otherParticle = Particles_5[_i];
+            var distance = dist(this.position.x, this.position.y, mouseX, mouseY);
+            if (distance < perception) {
                 v.x = this.position.x - mouseX;
                 v.y = this.position.y - mouseY;
             }
